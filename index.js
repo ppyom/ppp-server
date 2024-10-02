@@ -4,6 +4,7 @@ import config from './config.js';
 import holidayRouter from './route/holiday.js';
 import saraminRouter from './route/saramin.js';
 import blogRouter from './route/blog.js';
+import githubRouter from './route/github.js';
 
 const app = express();
 
@@ -21,6 +22,7 @@ app.get('/', (req, res, next) => {
 app.use('/holiday', holidayRouter);
 app.use('/saramin', saraminRouter);
 app.use('/blog', blogRouter);
+app.use('/github', githubRouter);
 
 app.use((req, res) => {
   return res.status(404).send({ message: '찾을 수 없는 페이지입니다.' });
