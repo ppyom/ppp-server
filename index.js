@@ -1,6 +1,7 @@
 import express from 'express';
 import cors from 'cors';
 import config from './config.js';
+import holidayRouter from './route/holiday.js';
 
 const app = express();
 
@@ -14,6 +15,8 @@ app.use(cors(corsOptions));
 app.get('/', (req, res, next) => {
   return res.send({ github: 'https://github.com/ppp-server' });
 });
+
+app.use('/holiday', holidayRouter);
 
 app.use((req, res) => {
   return res.status(404).send({ message: '찾을 수 없는 페이지입니다.' });

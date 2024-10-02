@@ -6,7 +6,7 @@
 
 1. `npm i`를 입력해 필요한 라이브러리를 설치합니다.
 
-   - express, dotenv, cors
+   - express, dotenv, cors, axios
    - nodemon, prettier
 
 2. `.env` 파일을 생성하고 아래 내용을 입력합니다.
